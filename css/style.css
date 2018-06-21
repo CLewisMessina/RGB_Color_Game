@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%
+}
+
+body {
+    background-color: #3c3c3c;
+    font-family: "Montserrat", "Avenir", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section 1: header */
+
+.flex1 {
+    justify-content: flex-start;
+}
+
+.flex1--Inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+    font-weight: normal;
+    font-size: 3rem;
+    background-color: pink;
+    color: #fff;
+    height: 7rem;
+    padding: 2rem 0;
+}
+
+#colorDisplay {
+    font-size: 7rem;
+    color: #fff;
+    height: 8.5rem;
+    padding: inherit;
+    margin: 0;
+}
+
+/* Section 2: buttons and feedback message*/
+
+.flex2 {
+    flex-basis: 3rem;
+}
+
+#stripe {
+    background: #fff;
+    height: 3rem;
+    text-align: center;
+}
+
+.flex2--Inner {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex2--I4,
+#message {
+    background-color: none;
+    color: #3c3c3c;
+    font-size: 2rem;
+    display: inline-block;
+    width: 20%;
+}
+
+button {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    color: pink;
+    background: none;
+    height: 100%;
+    border: none;
+    padding: 0 1em;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+
+button:hover {
+    color: #fff;
+    background: pink;
+}
+
+.selected {
+    color: #fff;
+    background: pink;
+}
+
+/* Section 3: colored squares*/
+
+.flex3 {
+    max-width: 40vw;
+    margin-left: 30vw;
+    margin-top: 1rem ;
+}
+
+.square {
+    width: 30%;
+    background: #fff;
+    padding-bottom: 25%;
+    float: left;
+    border-radius: 2rem;
+    margin: 1.5%;
+    transition: background-color 0.35s;
+    -webkit-transition: background-color 0.35s;
+    -moz-transition: background-color 0.35s;
+}
+
+
+@media (max-width: 650px) {
+    h1 {
+        font-size: 4rem;
+    }
+    #colorDisplay {
+        font-size: 6rem;
+        height: 7rem;
+        
+    }
+}
+
+@media(max-width: 539px) {
+    h1 {
+        font-size: 3rem;
+    }
+    #colorDisplay {
+        font-size: 5rem;
+        height: 6rem;
+    }
+}
+
+@media(max-width: 453px) {
+    h1 {
+        font-size: 2rem;
+    }
+    #colorDisplay {
+        font-size: 3rem;
+        
+        padding: 1rem;
+    }
+}
